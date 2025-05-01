@@ -114,6 +114,6 @@ Commands which can run on the interpreter
 - Set up multi client
 - Add screenshot command
 ## License
-AndroRAT is licensed under MIT license take a look at the [LICENSE]()
+AndroRAT is licensed under MIT license take a look at the [LICENSE](https://github.com/Magma69-cyber/AndroRAT/blob/main/LICENSE)
 for more information.
 
